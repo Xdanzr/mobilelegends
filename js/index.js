@@ -125,10 +125,6 @@ document.getElementById("btnSubmitClaim").addEventListener("click", () => {
         alert("ID & Nick wajib diisi!");
         return;
     }
-    if (!/^\d{7,}$/.test(id)) {
-    alert("Claim ID harus terdiri dari minimal 9 angka!");
-    return;
-  }
 
     console.log("CLAIM:", claimData);
 
