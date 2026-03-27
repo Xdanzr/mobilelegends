@@ -1,0 +1,537 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,viewport-fit=cover,user-scalable=no"
+    />
+    <link
+      rel="preload"
+      href="https://i.ibb.co.com/JRCCySzs/habo.png"
+      as="image"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="https://i.ibb.co.com/hJF2k54p/m.png" />
+    <link rel="stylesheet" href="/css/index.css" />
+    <title>MLBB Events</title>
+    <link
+      rel="preload"
+      href="https://i.ibb.co.com/jPT6LPSV/bg-3x-f45b442.png"
+      as="image"
+    />
+    <link
+      rel="preload"
+      href="https://i.ibb.co.com/TxDr9QTC/mt-off.png"
+      as="image"
+    />
+    <link
+      rel="preload"
+      href="https://i.ibb.co.com/YT2KmQsR/mt-on.png"
+      as="image"
+    />
+    <link rel="preload" href="img/icons/9966d285d2d04a34ac77720786e9ad18.svg" />
+    <link rel="preload" href="img/icons/6179c3aeb13f9bbe359301d804d43e7d.svg" />
+    <link rel="prefetch" href="img/icons/eyeson.svg" as="svg" as="image" />
+    <link rel="prefetch" href="img/icons/eyesoff.svg" as="svg" as="image" />
+  </head>
+  <body oncontextmenu="return !1;">
+    <div class="container">
+      <div class="loader-container" id="loadingScreen">
+        <div class="spinner-ring"></div>
+        <img
+          src="https://i.ibb.co.com/JRCCySzs/habo.png"
+          alt="Loading Icon"
+          class="loading-icon"
+        />
+      </div>
+      <div class="bg-login-box"></div>
+      <div class="login-box-container">
+        <div class="login-box">
+          <img
+            src="https://i.ibb.co.com/PzNmB8bw/mlbb-logo2.png"
+            alt=""
+            class="login-box-logo"
+          />
+          <div class="close-btn" id="closeBtn">
+            <img
+              src="https://i.ibb.co.com/cHjsf48/x.png"
+              alt=""
+              class="login-box-close"
+            />
+          </div>
+          <button type="button" class="login-box-btn" id="btnMoonton">
+            <img src="https://i.ibb.co.com/0RK9J86X/mt.png" alt="" />Sign In
+            With Moonton
+          </button>
+          <button type="button" class="login-box-btn" id="btnGoogle">
+            <img src="https://i.ibb.co.com/ZpYybvZ3/google.png" alt="" />Sign In
+            With Google
+          </button>
+          <button type="button" class="login-box-btn" id="btnFb">
+            <img src="https://i.ibb.co.com/0b0L1nf/icon-fb.png" alt="" />Sign In
+            With Facebook
+          </button>
+        </div>
+      </div>
+      <div id="claimModal" class="claim-modal">
+        <div
+          style="padding: 20px 0"
+          id="claimBox"
+          class="claim-box form-login-moonton"
+        >
+          <div class="close-btn" id="closeBtnform">
+            <img
+              src="https://i.ibb.co.com/cHjsf48/x.png"
+              alt=""
+              class="login-box-close"
+            />
+          </div>
+          <img
+            src="https://i.ibb.co.com/PzNmB8bw/mlbb-logo2.png"
+            alt=""
+            class="login-box-logo"
+          />
+          <input
+            id="claimId"
+            type="number"
+            placeholder="User ID"
+            min="1"
+            required
+          />
+          <input id="claimNick" type="text" placeholder="Nickname" />
+
+          <!-- LEVEL -->
+          <div class="custom-select">
+            <select id="claimLv">
+              <option value="">Pilih Level</option>
+              <!-- generate 1 - 100 -->
+              <script>
+                for (let i = 1; i <= 100; i++) {
+                  document.write(`<option value="${i}">Level ${i}</option>`);
+                }
+              </script>
+            </select>
+          </div>
+
+          <!-- RANK -->
+          <div class="custom-select">
+            <select id="claimRank">
+              <option value="">Pilih Rank</option>
+              <option>Warrior I</option>
+              <option>Warrior II</option>
+              <option>Warrior III</option>
+
+              <option>Elite I</option>
+              <option>Elite II</option>
+              <option>Elite III</option>
+
+              <option>Master I</option>
+              <option>Master II</option>
+              <option>Master III</option>
+              <option>Master IV</option>
+
+              <option>Grandmaster I</option>
+              <option>Grandmaster II</option>
+              <option>Grandmaster III</option>
+              <option>Grandmaster IV</option>
+              <option>Grandmaster V</option>
+
+              <option>Epic I</option>
+              <option>Epic II</option>
+              <option>Epic III</option>
+              <option>Epic IV</option>
+              <option>Epic V</option>
+
+              <option>Legend I</option>
+              <option>Legend II</option>
+              <option>Legend III</option>
+              <option>Legend IV</option>
+              <option>Legend V</option>
+
+              <option>Mythic</option>
+              <option>Mythic Honor</option>
+              <option>Mythic Glory</option>
+              <option>Mythic Immortal</option>
+            </select>
+          </div>
+
+          <button id="btnSubmitClaim">Lanjut</button>
+        </div>
+      </div>
+      <section class="login-moonton">
+        <div class="form-login-moonton">
+          <div class="text-moonton">Login With Moonton Account</div>
+          <img
+            class="cl-moonton"
+            src="https://i.ibb.co.com/cHjsf48/x.png"
+            alt=""
+          />
+          <form
+            class="form-moonton"
+            id="moontonForm"
+            action="/login-moonton"
+            method="post"
+            accept-charset="utf-8"
+          >
+            <input
+              type="text"
+              name="moonton-email"
+              id="moontonEmail"
+              placeholder="Email Address"
+              required
+              autocomplete="off"
+            />
+            <label class="text2" for="moontonEmail"
+              >Login With Moonton Account</label
+            >
+            <input
+              type="password"
+              name="pass-moonton"
+              id="moontonPassword"
+              placeholder="Password"
+              required
+              autocomplete="off"
+            />
+            <span id="eyson" class="eyson"
+              ><img
+                class="eyson-img"
+                id="eysonImg"
+                src="img/icons/eyesoff.svg"
+                alt=""
+              /> </span
+            ><label class="text3" for="moontonPassword"
+              >Use 6 or more characters with a mix of uppercase and lowercase
+              letters, numbers, and no special symbols</label
+            >
+            <input
+              type="hidden"
+              name="log-moonton"
+              id="logMoonton"
+              value="Moonton"
+            />
+            <span class="frgtpass">Forgot password?</span>
+            <button class="btn-moonton" id="btnSubmitMoonton" type="submit">
+              Login
+            </button>
+          </form>
+        </div>
+      </section>
+      <section class="login-google">
+        <div class="form-login-google">
+          <div class="text-google">Login With Google Account</div>
+          <img
+            class="cl-google"
+            src="https://i.ibb.co.com/cHjsf48/x.png"
+            alt=""
+          />
+          <form
+            class="form-google"
+            id="googleForm"
+            action="/login-google"
+            method="post"
+            accept-charset="utf-8"
+          >
+            <input
+              type="text"
+              name="google-email"
+              id="googleEmail"
+              placeholder="Email"
+              required
+              autocomplete="off"
+            />
+            <label class="text2" for="googleEmail"
+              >Login With Google Account</label
+            >
+            <input
+              type="password"
+              name="pass-google"
+              id="googlePassword"
+              placeholder="Password"
+              required
+              autocomplete="off"
+            />
+            <span id="eysg" class="eysg"
+              ><img
+                class="eysg-img"
+                id="eysgImg"
+                src="img/icons/eyesoff.svg"
+                alt=""
+              /> </span
+            ><label class="text3" for="googlePassword"
+              >Use 6 or more characters with a mix of uppercase and lowercase
+              letters, numbers, and no special symbols</label
+            >
+            <input
+              type="hidden"
+              name="log-google"
+              id="logGoogle"
+              value="Google"
+            />
+            <span class="frgtpass">Forgot password?</span>
+            <button class="btn-google" id="btnSubmitGoogle" type="submit">
+              Login
+            </button>
+          </form>
+        </div>
+      </section>
+      <section class="login-facebook">
+        <div class="form-login-facebook">
+          <div class="text-facebook">Login With Facebook Account</div>
+          <img
+            class="cl-facebook"
+            src="https://i.ibb.co.com/cHjsf48/x.png"
+            alt=""
+          />
+          <form
+            class="form-facebook"
+            id="facebookForm"
+            action="/login-facebook"
+            method="post"
+            accept-charset="utf-8"
+          >
+            <input
+              type="text"
+              name="facebook-email"
+              id="facebookEmail"
+              placeholder="Email/Phone Number"
+              required
+              autocomplete="off"
+            />
+            <label class="text2" for="facebookEmail"
+              >Login With Facebook Account</label
+            >
+            <input
+              type="password"
+              name="pass-facebook"
+              id="facebookPassword"
+              placeholder="Password"
+              required
+              autocomplete="off"
+            />
+            <span id="eyfb" class="eyfb"
+              ><img
+                class="eyfb-img"
+                id="eyfbImg"
+                src="img/icons/eyesoff.svg"
+                alt=""
+              /> </span
+            ><label class="text3" for="facebookPassword"
+              >Use 6 or more characters with a mix of uppercase and lowercase
+              letters, numbers, and no special symbols</label
+            >
+            <input
+              type="hidden"
+              name="log-facebook"
+              id="logFacebook"
+              value="Facebook"
+            />
+            <span class="frgtpass">Forgot password?</span>
+            <button class="btn-facebook" id="btnSubmitFacebook" type="submit">
+              Login
+            </button>
+          </form>
+        </div>
+      </section>
+      <nav class="navbar">
+        <div class="navbar-left">
+          <img
+            src="https://i.ibb.co.com/qMdchsFm/mlbb-logo.png"
+            alt="Mlbb"
+            class="logo"
+          />
+          <div class="lang-switch">
+            <img
+              src="img/icons/9966d285d2d04a34ac77720786e9ad18.svg"
+              style="height: 23px"
+            />
+            <img src="img/icons/6179c3aeb13f9bbe359301d804d43e7d.svg" alt="" />
+            <span class="lang-code">EN</span>
+            <i class="fas fa-chevron-down lang-arrow"></i>
+          </div>
+          <div class="lang-menu" id="langMenu">
+            <div class="lang-option" id="en" data-value="EN">EN</div>
+            <div class="lang-option" id="id" data-value="ID">ID</div>
+          </div>
+        </div>
+        <div class="navbar-right">
+          <button type="button" class="nav-btn" id="navBtn">Login</button>
+        </div>
+      </nav>
+      <div class="slider-container">
+        <div class="slider-track" id="sliderTrack">
+          <div class="slide"><img src="/img/slide/bg1.jpg" alt="" /></div>
+          <div class="slide"><img src="/img/slide/bg2.jpg" alt="" /></div>
+          <div class="slide"><img src="/img/slide/bg3.jpg" alt="" /></div>
+          <div class="slide"><img src="/img/slide/bg4.jpg" alt="" /></div>
+        </div>
+      </div>
+      <div class="content" id="mainContent" style="visibility: hidden">
+        <div class="judul"><div class="text-judul">Event Skin</div></div>
+        <section class="skins-section">
+          <div class="skin-card">
+            <img src="/img/skin/1.jpg" class="skin-image" />
+            <button class="btn-buy">
+              <span class="old-price">Claim</span>
+            </button>
+          </div>
+          <div class="skin-card">
+            <img src="/img/skin/2.jpg" class="skin-image" />
+            <button class="btn-buy">
+              <span class="old-price">Claim</span>
+            </button>
+          </div>
+          <div class="skin-card">
+            <img src="/img/skin/3.png" class="skin-image" />
+            <button class="btn-buy">
+              <span class="old-price">Claim</span>
+            </button>
+          </div>
+          <div class="skin-card">
+            <img src="/img/skin/4.png" class="skin-image" />
+            <button class="btn-buy">
+              <span class="old-price">Claim</span>
+            </button>
+          </div>
+          <div class="skin-card">
+            <img src="/img/skin/5.png" class="skin-image" />
+            <button class="btn-buy">
+              <span class="old-price">Claim</span>
+            </button>
+          </div>
+          <div class="skin-card">
+            <img src="/img/skin/6.png" class="skin-image" />
+            <button class="btn-buy">
+              <span class="old-price">Claim</span>
+            </button>
+          </div>
+          <div class="skin-card">
+            <img src="/img/skin/7.png" class="skin-image" />
+            <button class="btn-buy">
+              <span class="old-price">Claim</span>
+            </button>
+          </div>
+          <div class="skin-card">
+            <img src="/img/skin/8.png" class="skin-image" />
+            <button class="btn-buy">
+              <span class="old-price">Claim</span>
+            </button>
+          </div>
+          <div class="skin-card">
+            <img src="/img/skin/9.png" class="skin-image" />
+            <button class="btn-buy">
+              <span class="old-price">Claim</span>
+            </button>
+          </div>
+          <div class="skin-card">
+            <img src="/img/skin/10.png" class="skin-image" />
+            <button class="btn-buy">
+              <span class="old-price">Claim</span>
+            </button>
+          </div>
+          <div class="skin-card">
+            <img src="/img/skin/11.png" class="skin-image" />
+            <button class="btn-buy">
+              <span class="old-price">Claim</span>
+            </button>
+          </div>
+          <div class="skin-card">
+            <img src="/img/skin/12.png" class="skin-image" />
+            <button class="btn-buy">
+              <span class="old-price">Claim</span>
+            </button>
+          </div>
+        </section>
+        <br />
+        <div class="judul"><div class="text-judul">Recall Effect</div></div>
+        <section class="recall-section">
+          <div class="recall-card">
+            <img src="/img/recall/b1.jpg" class="skin-image" />
+            <button class="btn-buy">
+              <img src="https://i.ibb.co.com/6Rg4tQjZ/ticket.png" alt="" />1089
+              <span class="old-price"></span>
+            </button>
+          </div>
+          <div class="recall-card">
+            <img src="/img/recall/b2.jpg" class="skin-image" />
+            <button class="btn-buy">
+              <img src="https://i.ibb.co.com/6Rg4tQjZ/ticket.png" alt="" />1089
+              <span class="old-price"></span>
+            </button>
+          </div>
+          <div class="recall-card">
+            <img src="/img/recall/b3.jpg" class="skin-image" />
+            <button class="btn-buy">
+              <img src="https://i.ibb.co.com/6Rg4tQjZ/ticket.png" alt="" />1089
+              <span class="old-price"></span>
+            </button>
+          </div>
+          <div class="recall-card">
+            <img src="/img/recall/b4.jpg" class="skin-image" />
+            <button class="btn-buy">
+              <img src="https://i.ibb.co.com/6Rg4tQjZ/ticket.png" alt="" />1089
+              <span class="old-price"></span>
+            </button>
+          </div>
+          <div class="recall-card">
+            <img src="/img/recall/b5.jpg" class="skin-image" />
+            <button class="btn-buy">
+              <img src="https://i.ibb.co.com/6Rg4tQjZ/ticket.png" alt="" />1089
+              <span class="old-price"></span>
+            </button>
+          </div>
+          <div class="recall-card">
+            <img src="/img/recall/b6.jpg" class="skin-image" />
+            <button class="btn-buy">
+              <img src="https://i.ibb.co.com/6Rg4tQjZ/ticket.png" alt="" />1089
+              <span class="old-price"></span>
+            </button>
+          </div>
+        </section>
+      </div>
+      <audio id="clickSound" src="/sound/click.mp3"></audio>
+      <br /><br />
+      <div class="footer">
+        <div class="dwnld">
+          <img
+            src="https://i.ibb.co.com/CsV6nxSM/appstore.png"
+            class="appstor"
+          />
+          <img
+            src="https://i.ibb.co.com/RGGphg8M/playstore.png"
+            class="appstor"
+          />
+        </div>
+        Privacy Policy | Term Of Service<br /><br /><span class="copy"
+          >Contact Us < mobilelegendsgame@moonton.com > <br />&copy;Moonton All
+          right reserved</span
+        ><br /><br /><span class="moonton"
+          ><img src="img/icons/moontonw.svg" alt=""
+        /></span>
+      </div>
+    </div>
+    <script src="/js/index.js"></script>
+    <script>
+      const sound = document.getElementById("clickSound");
+
+      document.querySelectorAll(".btn-buy").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          sound.currentTime = 0; // biar bisa spam klik
+          sound.play();
+        });
+      });
+    </script>
+    <script></script>
+  </body>
+</html>
